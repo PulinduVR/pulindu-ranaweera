@@ -50,7 +50,6 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-10">
           <div className="space-y-6">
-            // @ts-ignore
             <Card glow className="border-accent">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
