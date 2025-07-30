@@ -32,7 +32,6 @@ const About = () => {
         </div>
 
         <div className="mb-10">
-          // @ts-ignore
             <Card glow>
             <div className="p-6">
             <CardHeader>
