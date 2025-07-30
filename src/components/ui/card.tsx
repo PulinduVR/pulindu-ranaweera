@@ -1,29 +1,29 @@
 import * as React from "react"
 import { cn } from "../../lib/utils"
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  glow?: boolean
-}
+type CardProps = React.HTMLAttributes<HTMLDivElement> & {
+  glow?: boolean;
+  children?: React.ReactNode;
+};
 
-const Card = React.forwardRef(({ className, glow, children, ...props }, ref) => (
-  <div
-    ref={ref}
-    data-glow={glow ? true : undefined}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden",
-      className
-    )}
-    style={{
-      '--bg-spot-opacity': glow ? '0.15' : undefined,
-      '--border-spot-opacity': glow ? '0.8' : undefined,
-      '--border-light-opacity': glow ? '0.6' : undefined,
-    }}
-    {...props}
-  >
-    {glow && <span data-glow />}
-    {children}
-  </div>
-));
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  ({ className, glow, children, ...props }, ref) => (
+    <div
+      ref={ref}
+      data-glow={glow ? true : undefined}
+      className={cn("rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden", className)}
+      style={{
+        '--bg-spot-opacity': glow ? '0.15' : undefined,
+        '--border-spot-opacity': glow ? '0.8' : undefined,
+        '--border-light-opacity': glow ? '0.6' : undefined,
+      }as React.CSSProperties & Record<string, string | undefined>}
+      {...props}
+    >
+      {glow && <span data-glow />}
+      {children}
+    </div>
+  )
+);
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
@@ -39,7 +39,7 @@ const CardHeader = React.forwardRef<
 CardHeader.displayName = "CardHeader"
 
 const CardTitle = React.forwardRef<
-  HTMLParagraphElement,
+  HTMLHeadingElement, 
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => (
   <h3

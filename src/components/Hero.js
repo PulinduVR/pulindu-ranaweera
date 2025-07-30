@@ -1,0 +1,23 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Button } from "../components/ui/button";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
+import Me from "/Me.jpg";
+// Sample logos – you can import them or use public URLs
+import HtmlLogo from "/logos/html.png";
+import ReactLogo from "/logos/react.png";
+import GithubLogo from "/logos/github.png";
+import PythonLogo from "/logos/python.png";
+import NodeLogo from "/logos/node.png";
+import TensorflowLogo from "/logos/Tensorflow.png";
+const floatingIcons = [
+    { src: HtmlLogo, alt: "HTML", style: "top-0 left-0 -translate-x-1/2" },
+    { src: ReactLogo, alt: "React", style: "bottom-0 left-0 translate-y-1/2" },
+    { src: PythonLogo, alt: "React", style: "bottom-0 left-4/4 translate-y-1/2" },
+    { src: NodeLogo, alt: "Node.js", style: "top-[50%] right-[120%] translate-x-1/2" },
+    { src: GithubLogo, alt: "GitHub", style: "top-0 right-1 translate-x-1/2" },
+    { src: TensorflowLogo, alt: "TensorFlow", style: "top-[50%] left-[110%] translate-x-1/2" }
+];
+const Hero = () => {
+    return (_jsx("section", { id: "home", className: "min-h-screen flex items-center justify-center px-4 py-20 gradient-bg mt-10", children: _jsxs("div", { className: "max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center", children: [_jsxs("div", { className: "space-y-8", children: [_jsxs("div", { className: "space-y-4", children: [_jsx("p", { className: "text-muted-foreground text-lg", children: "Hello, I'm" }), _jsxs("h1", { className: "text-5xl lg:text-6xl font-bold", children: [_jsx("span", { className: "primary-glow", children: "Pulindu" }), _jsx("br", {}), _jsx("span", { className: "text-foreground", children: "Ranaweera" })] }), _jsx("p", { className: "text-xl lg:text-2xl text-muted-foreground", children: "Computer Science & Engineering Undergraduate" })] }), _jsx("p", { className: "text-lg text-muted-foreground leading-relaxed", children: "I'm a passionate developer who thrives on building impactful solutions and bringing ideas to life. I take pride in my ability to lead teams toward a shared vision, whether it's managing a project, organizing an event, or driving a tech initiative." }), _jsxs("div", { className: "flex flex-wrap gap-4", children: [_jsx(Button, { asChild: true, className: "bg-primary-glow hover:bg-primary-glow/90", children: _jsxs("a", { href: "#contact", children: [_jsx(Mail, { className: "w-4 h-4 mr-2" }), " Get In Touch"] }) }), _jsx(Button, { variant: "outline", asChild: true, children: _jsxs("a", { href: "https://drive.google.com/file/d/1AcG7Oxwt-fc4egknnzN39WfKjWP_FHcd/view", target: "_blank", rel: "noopener noreferrer", children: [_jsx(Download, { className: "w-4 h-4 mr-2" }), " Download CV"] }) })] }), _jsxs("div", { className: "flex gap-4", children: [_jsx(Button, { variant: "ghost", size: "icon", asChild: true, children: _jsx("a", { href: "https://github.com/PulinduVR", target: "_blank", rel: "noopener noreferrer", children: _jsx(Github, { className: "w-5 h-5" }) }) }), _jsx(Button, { variant: "ghost", size: "icon", asChild: true, children: _jsx("a", { href: "https://linkedin.com/in/pulindu-ranaweera", target: "_blank", rel: "noopener noreferrer", children: _jsx(Linkedin, { className: "w-5 h-5" }) }) }), _jsx(Button, { variant: "ghost", size: "icon", asChild: true, children: _jsx("a", { href: "mailto:pulinduv@gmail.com", children: _jsx(Mail, { className: "w-5 h-5" }) }) }), _jsx(Button, { variant: "ghost", size: "icon", asChild: true, children: _jsx("a", { href: "https://medium.com/@pulinduv", target: "_blank", rel: "noopener noreferrer", children: _jsx("img", { src: "/logos/medium.png", alt: "Medium", className: "w-5 h-5" }) }) }), _jsx(Button, { variant: "ghost", size: "icon", asChild: true, children: _jsx("a", { href: "https://www.kaggle.com/pulinduranaweera", target: "_blank", rel: "noopener noreferrer", children: _jsx("img", { src: "/logos/kaggle.png", alt: "Medium", className: "w-5 h-5" }) }) })] })] }), _jsx("div", { className: "flex justify-center lg:justify-end", children: _jsxs("div", { className: "relative w-80 h-80 lg:w-96 lg:h-96", children: [_jsx("div", { className: "w-full h-full rounded-full overflow-hidden border-4 border-primary-glow/20 shadow-2xl animate-float relative z-10", children: _jsx("img", { src: Me, alt: "Pulindu Ranaweera", className: "w-full h-full object-cover" }) }), floatingIcons.map((icon, i) => (_jsx("img", { src: icon.src, alt: icon.alt, className: `w-10 h-10 absolute ${icon.style} z-[100] animate-float-slow opacity-80` }, i))), _jsx("div", { className: "absolute inset-0 rounded-full bg-gradient-to-tr from-primary-glow/20 to-transparent z-0" })] }) })] }) }));
+};
+export default Hero;
