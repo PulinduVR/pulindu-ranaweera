@@ -11,12 +11,14 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       data-glow={glow ? true : undefined}
-      className={cn("rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden", className)}
+      className={cn("rounded-lg border bg-card text-card-foreground shadow-sm relative md:overflow-hidden", className)}
       style={{
-        '--bg-spot-opacity': glow ? '0.15' : undefined,
-        '--border-spot-opacity': glow ? '0.8' : undefined,
-        '--border-light-opacity': glow ? '0.6' : undefined,
-      }as React.CSSProperties & Record<string, string | undefined>}
+  touchAction: 'pan-y',
+  '--bg-spot-opacity': glow ? '0.15' : undefined,
+  '--border-spot-opacity': glow ? '0.8' : undefined,
+  '--border-light-opacity': glow ? '0.6' : undefined,
+} as React.CSSProperties & Record<string, string | undefined>}
+
       {...props}
     >
       {glow && <span data-glow />}
