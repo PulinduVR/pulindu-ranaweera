@@ -9,6 +9,6 @@ import Blog from "../components/Blog";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 const Index = () => {
-    return (_jsxs("div", { className: "min-h-screen bg-background", children: [_jsx(Navigation, {}), _jsx(Hero, {}), _jsx(About, {}), _jsx(Projects, {}), _jsx(Skills, {}), _jsx(Experience, {}), _jsx(Blog, {}), _jsx(Contact, {}), _jsx(Footer, {})] }));
+    return (_jsxs("div", { className: "min-h-screen bg-background overflow-x-hidden", children: [_jsx(Navigation, {}), _jsx(Hero, {}), _jsx(About, {}), _jsx(Projects, {}), _jsx(Skills, {}), _jsx(Experience, {}), _jsx(Blog, {}), _jsx(Contact, {}), _jsx(Footer, {})] }));
 };
 export default Index;

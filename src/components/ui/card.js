@@ -1,7 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import * as React from "react";
 import { cn } from "../../lib/utils";
-const Card = React.forwardRef(({ className, glow, children, ...props }, ref) => (_jsxs("div", { ref: ref, "data-glow": glow ? true : undefined, className: cn("rounded-lg border bg-card text-card-foreground shadow-sm relative overflow-hidden", className), style: {
+const Card = React.forwardRef(({ className, glow, children, ...props }, ref) => (_jsxs("div", { ref: ref, "data-glow": glow ? true : undefined, className: cn("rounded-lg border bg-card text-card-foreground shadow-sm relative md:overflow-hidden", className), style: {
+        touchAction: 'pan-y',
         '--bg-spot-opacity': glow ? '0.15' : undefined,
         '--border-spot-opacity': glow ? '0.8' : undefined,
         '--border-light-opacity': glow ? '0.6' : undefined,

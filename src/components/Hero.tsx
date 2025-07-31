@@ -16,7 +16,7 @@ const floatingIcons = [
   { src: PythonLogo, alt: "React", style: "bottom-0 left-4/4 translate-y-1/2" },
   { src: NodeLogo, alt: "Node.js", style: "top-[50%] right-[120%] translate-x-1/2" },
   { src: GithubLogo, alt: "GitHub", style: "top-0 right-1 translate-x-1/2" },
-  { src: TensorflowLogo, alt: "TensorFlow", style: "top-[50%] left-[110%] translate-x-1/2" }
+  { src: TensorflowLogo, alt: "TensorFlow", style: "hidden sm:block top-[50%] left-[110%] translate-x-1/2"}
 ];
 
 const Hero = () => {

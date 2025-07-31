@@ -38,7 +38,6 @@ const Projects = () => {
             year: "2025",
             status: "Completed",
             github: "https://github.com/Ilampoornan/LegalDocumentAnalysisSystem",
-            demo: "#"
         },
         {
             title: "Innovate with Ballerina 2025 Website",
@@ -47,6 +46,7 @@ const Projects = () => {
             year: "2025",
             status: "Completed",
             github: "https://github.com/IEEESB-UOM/Innovate-with-Ballerina-New",
+            demo: "https://innovatewithballerina.com/"
         },
         {
             title: "Countdown Timer for Codejam 2025",
