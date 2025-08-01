@@ -67,7 +67,7 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <a href="https://linkedin.com/in/pulindu-ranaweera" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/pulindu-ranaweera-121b77268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
             </Button>
